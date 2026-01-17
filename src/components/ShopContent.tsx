@@ -81,9 +81,9 @@ function ProductCard({ product, index }: { product: any; index: number }) {
                         [mouseX, mouseY],
                         ([xValue, yValue]) => `linear-gradient(135deg, transparent 45%, rgba(255,255,255,0.4) 50%, transparent 55%)`,
                     ),
-                    backgroundPosition: useTransform(
+                    backgroundPosition : useTransform(
                         [mouseX, mouseY],
-                        ([xValue, yValue]) => `${(xValue / 400) * 100}% ${(yValue / 400) * 100}%`
+                        ([xValue, yValue]) => `${(xValue as number   / 400) * 100}% ${(yValue as number / 400) * 100}%`
                     ),
                     backgroundSize: '200% 200%'
                 }}
@@ -147,7 +147,7 @@ function ProductCard({ product, index }: { product: any; index: number }) {
                     </motion.button>
 
                     <motion.button
-                        whileHover={{ scale: 1.05, bg: "rgba(212,165,116,0.1)" }}
+                        whileHover={{ scale: 1.05, backgroundColor: "rgba(212,165,116,0.1)" }}
                         className="w-14 h-14 rounded-2xl border border-white/5 flex items-center justify-center text-accent/20 hover:text-primary transition-all"
                     >
                         <Info size={18} />
